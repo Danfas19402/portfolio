@@ -1,0 +1,112 @@
+:root{
+  /* Tema claro */
+  --bg:#f5f7fa;
+  --card:#ffffff;
+  --muted:#64748b;
+  --accent:#0ea5e9;
+  --accent2:#34d399;
+  --glass: rgba(0,0,0,0.04);
+  --text:#1e293b;
+}
+
+/* Tema escuro */
+[data-theme="dark"]{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#9aa4b2;
+  --accent:#6ee7b7;
+  --accent2:#34d399;
+  --glass: rgba(255,255,255,0.05);
+  --text:#e6eef6;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family: Inter, system-ui, sans-serif;
+  line-height:1.5;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.container{max-width:1100px;margin:0 auto;padding:1rem;}
+
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+}
+
+.brand h1{margin:0;font-size:1.25rem}
+.brand .subtitle{margin:0;color:var(--muted);font-size:0.9rem}
+
+.header-actions{display:flex;gap:0.5rem;align-items:center}
+
+.site-header{
+  border-bottom:1px solid rgba(0,0,0,0.05);
+  position:sticky;top:0;
+  background:var(--card);
+  backdrop-filter: blur(6px);
+  z-index:50;
+  transition: background-color 0.4s ease;
+}
+
+.menu-toggle,.theme-toggle{
+  background:transparent;border:0;color:inherit;font-size:1.2rem;cursor:pointer;
+  padding:0.4rem 0.6rem;border-radius:8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+.main-nav a{color:var(--muted);text-decoration:none;padding:0.4rem 0.6rem;border-radius:8px;transition:color 0.3s ease}
+.main-nav a:hover{color:var(--accent)}
+
+.hero{padding:2rem 0;transition:background-color 0.4s ease,color 0.4s ease}
+.hero-grid{display:grid;grid-template-columns:1fr 320px;gap:1.25rem;align-items:start}
+.hero-card{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.05);transition: background-color 0.4s ease}
+
+.badge{display:inline-block;background:var(--glass);padding:0.35rem 0.6rem;border-radius:999px;margin:0.2rem 0.2rem 0 0;font-size:0.82rem;color:var(--muted);transition: background-color 0.3s ease}
+
+.btn{display:inline-block;background:linear-gradient(90deg,var(--accent),var(--accent2));color:white;padding:0.6rem 0.9rem;border-radius:10px;text-decoration:none;font-weight:600;border:0;cursor:pointer;transition:opacity 0.3s ease}
+.btn:hover{opacity:0.9}
+.btn.secondary{background:transparent;border:1px solid rgba(0,0,0,0.1);color:var(--muted);transition:color 0.3s ease,border 0.3s ease}
+
+.section{padding:1.6rem 0}
+.muted{color:var(--muted)}
+.small{font-size:0.85rem}
+
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.project-card{background:var(--card);padding:1rem;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.05);transition: background-color 0.4s ease}
+.project-card h4{margin:0 0 0.5rem 0}
+.project-card .link{color:var(--accent);text-decoration:none;font-weight:600;transition:color 0.3s ease}
+
+.education-list{list-style:none;padding:0;margin:0}
+.education-list li{padding:0.6rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+
+.chips{list-style:none;padding:0;display:flex;gap:0.6rem;flex-wrap:wrap}
+.chips li{background:var(--glass);padding:0.45rem 0.6rem;border-radius:999px;color:var(--muted);transition: background-color 0.3s ease}
+
+.contact-form{display:grid;gap:0.6rem;max-width:600px}
+.contact-form input,
+.contact-form textarea{background:var(--card);border:1px solid rgba(0,0,0,0.1);padding:0.6rem;border-radius:8px;color:inherit;transition: background-color 0.4s ease,color 0.4s ease}
+.form-actions{display:flex;gap:0.6rem;margin-top:0.4rem}
+
+.site-footer{
+  position:fixed;left:0;right:0;bottom:0;
+  background:var(--card);
+  border-top:1px solid rgba(0,0,0,0.05);
+  padding:0.6rem 0;text-align:center;color:var(--muted);
+  transition: background-color 0.4s ease,color 0.4s ease;
+}
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+  .main-nav{display:none}
+  .menu-toggle{display:block}
+}
+
+@media(max-width:560px){
+  .projects-grid{grid-template-columns:1fr}
+  .brand h1{font-size:1rem}
+}
