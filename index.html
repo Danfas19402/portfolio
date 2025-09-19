@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Daniel Ferreira — Portfólio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:;base64,=" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Daniel Ferreira</h1>
+        <p class="subtitle">Desenvolvedor Web Júnior — HTML, CSS, JavaScript</p>
+      </div>
+
+      <div class="header-actions">
+        <button id="menuToggle" class="menu-toggle" aria-label="Abrir menu">☰</button>
+        <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema">🌙</button>
+      </div>
+
+      <nav id="mainNav" class="main-nav">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#formacao">Formação</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="sobre" class="hero container">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <h2>Busco minha primeira oportunidade como Desenvolvedor Web Júnior</h2>
+          <p>
+            Aplicar e expandir conhecimentos em <strong>HTML, CSS e JavaScript</strong>.
+            Tenho experiência com projetos pessoais que você pode conferir na seção de projetos.
+          </p>
+
+          <div class="badges">
+            <span class="badge">HTML5</span>
+            <span class="badge">CSS3</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">Git / GitHub</span>
+            <span class="badge">VS Code</span>
+            <span class="badge">Responsividade</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn" href="#projetos">Ver projetos</a>
+            <a class="btn secondary" href="#contato">Entrar em contato</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <ul class="info-list">
+            <li><strong>Telefone:</strong> <a href="tel:+5516997763983">16 99776-3983</a></li>
+            <li><strong>E-mail:</strong> <a href="mailto:programadorweb19402@gmail.com">programadorweb19402@gmail.com</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/daniel-ferreira1969/" target="_blank" rel="noopener">linkedin.com/in/daniel-ferreira1969</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/Danfas19402" target="_blank" rel="noopener">github.com/Danfas19402</a></li>
+            <li><strong>Objetivo:</strong> Desenvolvedor Web Júnior</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" class="container section">
+      <h3>Projetos</h3>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h4>Soma-Invertida</h4>
+          <p>Inverte números de 4 dígitos e faz cálculos conforme regra. (HTML, CSS, JS)</p>
+          <a href="https://github.com/Danfas19402" target="_blank" rel="noopener" class="link">Ver no GitHub</a>
+        </article>
+        <article class="project-card">
+          <h4>Monte-seu-Suco</h4>
+          <p>Combinações de frutas com resultado em efeitos — UI interativa.</p>
+          <a href="https://github.com/Danfas19402" target="_blank" rel="noopener" class="link">Ver no GitHub</a>
+        </article>
+        <article class="project-card">
+          <h4>Leitor-de-Código-QR</h4>
+          <p>Leitura de códigos QR para mobile e desktop (JS API).</p>
+          <a href="https://github.com/Danfas19402" target="_blank" rel="noopener" class="link">Ver no GitHub</a>
+        </article>
+        <article class="project-card">
+          <h4>Lista-de-Tarefas</h4>
+          <p>Gerenciador simples de tarefas com persistência local.</p>
+          <a href="https://github.com/Danfas19402" target="_blank" rel="noopener" class="link">Ver no GitHub</a>
+        </article>
+        <article class="project-card">
+          <h4>Chronos - CHT</h4>
+          <p>Contador de horas trabalhadas com exportação e relatórios.</p>
+          <a href="https://github.com/Danfas19402" target="_blank" rel="noopener" class="link">Ver no GitHub</a>
+        </article>
+        <article class="project-card">
+          <h4>Controle-Expense</h4>
+          <p>Controle de despesas com filtros e soma de gastos.</p>
+          <a href="https://github.com/Danfas19402" target="_blank" rel="noopener" class="link">Ver no GitHub</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="formacao" class="container section">
+      <h3>Formação</h3>
+      <ul class="education-list">
+        <li><strong>Design Digital — Uniara</strong> <span class="muted">2013 — 2015</span></li>
+        <li><strong>Design Digital (Tecnólogo) — Uninter</strong> <span class="muted">2018 — 2020</span></li>
+        <li><strong>HTML e CSS — Fundação Bradesco</strong> <span class="muted">2024</span></li>
+        <li><strong>Missão Programação do Zero — DevClub</strong> <span class="muted">2025</span></li>
+      </ul>
+    </section>
+
+    <section id="softskills" class="container section">
+      <h3>Soft Skills</h3>
+      <ul class="chips">
+        <li>Proatividade</li>
+        <li>Facilidade para aprender</li>
+        <li>Trabalho em equipe</li>
+        <li>Organização</li>
+      </ul>
+    </section>
+
+    <section id="contato" class="container section">
+      <h3>Contato</h3>
+      <form id="contactForm" class="contact-form" onsubmit="return false;">
+        <label for="name">Nome</label>
+        <input id="name" name="name" type="text" required />
+
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="message">Mensagem</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <div class="form-actions">
+          <button id="sendBtn" class="btn" type="submit">Enviar</button>
+          <button id="clearBtn" class="btn secondary" type="button">Limpar</button>
+        </div>
+        <p id="formStatus" class="muted small"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Daniel Ferreira — Desenvolvedor Web Júnior</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
